@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Post.create(name: "Yaasir", address: "Vallee Pitot", description: "testing", price_per_night: 400, number_of_guests: 5)
