@@ -8,4 +8,5 @@
 Post.destroy_all
 
 Post.create(name: "Yaasir", address: "Vallee Pitot", description: "testing", price_per_night: 400, number_of_guests: 5)
-Post.create(name: "Caasir", address: "Vallee Pitot", description: "testing", price_per_night: 400, number_of_guests: 5)
+Post.create(name: "Sam", address: "Vallee ", description: "Bad", price_per_night: 50, number_of_guests: 5)
+Post.create(name: "Paul", address: " Pitot", description: "Good", price_per_night: 30, number_of_guests: 5)
