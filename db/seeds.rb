@@ -7,6 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Post.destroy_all
 
-Post.create(name: "Yaasir", address: "Vallee Pitot", description: "testing", price_per_night: 400, number_of_guests: 5)
-Post.create(name: "Sam", address: "Vallee ", description: "Bad", price_per_night: 50, number_of_guests: 5)
-Post.create(name: "Paul", address: " Pitot", description: "Good", price_per_night: 30, number_of_guests: 5)
+10.times do
+  Post.create(
+    name: Faker::Company.industry,
+    address: Faker::Address.city,
+    description: Faker::Company.catch_phrase,
+    price_per_night: Faker::Company.ein,
+    number_of_guests: Faker::Company.ein
+  )
+end
