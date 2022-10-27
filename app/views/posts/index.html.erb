@@ -1,7 +1,7 @@
 <nav>
   <h2>All Posts - (<%= @posts.count %>)</h2>
 
-  <div>
+  <div style="width: 200px; height: 100px;">
     <% @posts.each do |t| %>
       <%= t.name  %>
       <%= t.address  %>
@@ -9,6 +9,7 @@
       <%= t.price_per_night  %>
       <%= t.number_of_guests  %>
       <%= link_to "Show", post_path(t) %>
+      <br>
     <% end %>
   </div>
 </nav>
