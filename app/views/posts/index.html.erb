@@ -1,8 +1,8 @@
-<nav>
-  <h2>All Posts - (<%= @posts.count %>)</h2>
+<h2>All Posts - (<%= @posts.count %>)</h2>
 
-  <div style="width: 200px; height: 100px;">
-    <% @posts.each do |t| %>
+<div class="card-layout">
+  <% @posts.each do |t| %>
+    <div class="card-layout__item">
       <%= t.name  %>
       <%= t.address  %>
       <%= t.description  %>
@@ -10,6 +10,6 @@
       <%= t.number_of_guests  %>
       <%= link_to "Show", post_path(t) %>
       <br>
-    <% end %>
-  </div>
-</nav>
+    </div>
+  <% end %>
+</div>
