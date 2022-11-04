@@ -3,13 +3,13 @@
 
 <div class="container-post">
   <% @posts.each do |t| %>
-  <div class="card">
-      Name: <%= t.name  %> <br>
-      Address: <%= t.address  %> <br>
-      <%= t.description  %> <br>
-      <%= t.price_per_night  %> <br>
-      <%= t.number_of_guests  %> <br>
-      <%= link_to "Show", post_path(t) %>
-  </div>
+    <div class="card">
+        Name: <%= t.name  %> <br>
+        Address: <%= t.address  %> <br>
+        Description: <%= t.description  %> <br>
+        Price per Night: <%= t.price_per_night  %> <br>
+        Number of guests: <%= t.number_of_guests  %> <br><br>
+        <span><%= link_to "Show", post_path(t) %></span>
+    </div>
   <% end %>
 </div>

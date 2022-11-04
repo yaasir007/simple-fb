@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Post.destroy_all
 
-10.times do
+27.times do
   Post.create(
     name: Faker::Company.industry,
     address: Faker::Address.city,
