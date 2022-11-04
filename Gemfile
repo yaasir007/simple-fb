@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem 'faker'
 
+#for scss files
+gem 'sass-rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
