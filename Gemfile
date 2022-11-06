@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem 'faker'
 
+gem 'simple_form'
+
 #for scss files
 gem 'sass-rails'
 # Use Redis adapter to run Action Cable in production

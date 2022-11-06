@@ -6,3 +6,13 @@
 
 
 <%= link_to "Back", posts_path %>
+<%= link_to "New Post", post_path %>
+
+
+<%= simple_form_for [@post], method: :post do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :comment %>
+  <%= f.button :submit, "Book Me" %>
+  <%= link_to  "Back", cars_path %>
+<% end %>

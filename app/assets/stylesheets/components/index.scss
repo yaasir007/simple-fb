@@ -7,6 +7,12 @@ html {
   letter-spacing: .5px;
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-post {
   display: flex;
   justify-content: center;
