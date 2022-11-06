@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @posts = Flat.new(params_post)
+    @posts = Post.new(params_post)
     @posts.save
     redirect_to posts_path
   end
