@@ -4,12 +4,14 @@
 <div class="container-post">
   <% @posts.each do |t| %>
     <div class="card">
+      <div>
         Name: <%= t.name  %> <br>
         Address: <%= t.address  %> <br>
         Description: <%= t.description  %> <br>
         Price per Night: <%= t.price_per_night  %> <br>
-        Number of guests: <%= t.number_of_guests  %> <br><br>
-        <span><%= link_to "Show", post_path(t) %></span>
+        Number of guests: <%= t.number_of_guests  %>
+      </div>
+      <span><%= link_to "Show", post_path(t) %></span>
     </div>
   <% end %>
 </div>

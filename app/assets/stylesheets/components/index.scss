@@ -25,6 +25,7 @@ html {
     transition: all .25s ease-in;
     padding: 1rem;
     color: black;
+    position: relative;
   }
 
   .card:hover {
@@ -33,7 +34,10 @@ html {
   }
 
   .card span {
-    float: right;
+    position: absolute;
+    top: 90%;
+    right: 10%;
+    transform: translate(-10%, -40%);
   }
 
   .card span a {
