@@ -1,7 +1,8 @@
+<div class="title">
+  <h2>All Posts - (<%= @posts.count %>)</h2>
+  <h2><%= link_to "New Post", new_post_path %></h2>
+</div>
 
-<h2>All Posts - (<%= @posts.count %>) -
-  <%= link_to "New Post", new_post_path %>
-</h2>
 
 <div class="container-post">
   <% @posts.each do |t| %>
@@ -9,6 +10,7 @@
       <div>
         <p><u>Name:</u>  <%= t.name  %></p>
         <p><u>Description:</u> <br><%= t.description %></p>
+        <p><u>Address:</u> <br><%= t.address %></p>
       </div>
       <span><%= link_to "Show", post_path(t) %></span>
     </div>
