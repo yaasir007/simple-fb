@@ -20,7 +20,8 @@ class PostsController < ApplicationController
   def destory
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+
+    redirect_to posts_path, status: :see_other
   end
 
   private
