@@ -13,6 +13,7 @@
         <p><u>Address:</u> <br><%= t.address %></p>
       </div>
       <span><%= link_to "Show", post_path(t) %></span>
+      <%= link_to "Delete", method: :delete %>
     </div>
   <% end %>
 </div>
