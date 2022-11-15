@@ -8,11 +8,19 @@
   <% @posts.each do |t| %>
     <div class="card">
       <div>
-        <p><u>Name:</u>  <%= t.name  %></p>
-        <p><u>Description:</u> <br><%= t.description %></p>
-        <p><u>Address:</u> <br><%= t.address %></p>
+        <p class="div1"><u>Name:</u>  <%= t.name  %></p>
+        <p class="div2"><u>Description:</u> <br><%= t.description %></p>
+        <p class="div3"><u>Address:</u> <br><%= t.address %></p>
       </div>
       <span><%= link_to "Show", post_path(t) %></span>
     </div>
   <% end %>
 </div>
+
+<script>
+  ScrollReveal().reveal('.card', { delay: 200 });
+  ScrollReveal().reveal('.div1', { delay: 250 });
+  ScrollReveal().reveal('.div2', { delay: 300 });
+  ScrollReveal().reveal('.div3', { delay: 350 });
+
+</script>
