@@ -1,14 +1,38 @@
-<div class="form">
-<span>Please add a new post</span>
-  <%= simple_form_for [@post_new], method: :post do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <%= f.input :price_per_night %>
-    <%= f.input :number_of_guests %>
-    <%= f.button :submit, "Book Me" %>
-  <% end %>
+<div class='form-container'>
+  <div class="form">
+    <div class="titlenew">Welcome</div>
+    <div class="subtitle">Let's create your post!</div>
+    <%= simple_form_for [@post_new], method: :post do |f| %>
+    <div class="fields">
+      <div class="input-container ic1">
+        <%# <input id="firstname" class="input" type="text" placeholder=" " /> %>
+        <%= f.input :name, label: false, class: 'input', error: 'Username is mandatory, please specify one' %>
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Name</label>
+      </div>
 
-  <%= link_to  "Back to Hompage", posts_path %>
+      <div class="input-container ic1">
+        <%# <input id="lastname" class="input" type="text" placeholder=" " /> %>
+        <%= f.input :address, label: false, class: 'input' %>
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Address</label>
+      </div>
 
+      <div class="input-container ic1">
+        <%# <input id="email" class="input" type="text" placeholder=" " /> %>
+        <%= f.input :description, label: false, class: 'input' %>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Description</>
+      </div>
+
+      <div class="input-container ic1">
+        <%# <input id="email" class="input" type="text" placeholder=" " /> %>
+        <%= f.input :price_per_night, label: false, class: 'input text' %>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Price Per Night</>
+      </div>
+      <button type="text" class="submit">submit</button>
+    </div>
+    <% end %>
+  </div>
 </div>
