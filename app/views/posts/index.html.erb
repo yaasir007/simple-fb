@@ -3,19 +3,19 @@
   <h2><%= link_to "New Post", new_post_path %></h2>
 </div>
 
-
-<div class="container-post">
+<div class='container-post'>
   <% @posts.each do |t| %>
-    <div class="card">
-      <div>
-        <p class="div1"><u>Name:</u>  <%= t.name  %></p>
-        <p class="div2"><u>Description:</u> <br><%= t.description %></p>
-        <p class="div3"><u>Address:</u> <br><%= t.address %></p>
-      </div>
-      <span><%= link_to "Show", post_path(t) %></span>
+    <div class="card card-1">
+      <div class="card__icon"><%= t.name %></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title"><%= t.description %></h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+      </p>
     </div>
   <% end %>
 </div>
+
 
 <script>
   ScrollReveal().reveal('.card', { delay: 200 });

@@ -5,11 +5,14 @@
 }
 
 html {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: .5px;
+  background-color: black;
 }
+
+
 
 .title {
   display: flex;
@@ -29,35 +32,81 @@ html {
   height: auto;
   flex-wrap: wrap;
   gap: 20px;
+}
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .card {
-    width: 700px;
-    height: 250px;
-    background-color: #e27d5f;
-    border-radius: 10px;
-    transition: all .25s ease-in;
-    padding: 1rem;
-    color: black;
-    position: relative;
-  }
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 250px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
 
-  .card:hover {
-    background-color: rgb(2, 163, 155);
-    color: white;
-    cursor: pointer;
-  }
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
 
-  .card span {
-    position: absolute;
-    top: 90%;
-    right: 80%;
-    transform: translate(-90%, -40%);
-  }
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
 
-  .card span a {
-    text-decoration: none;
-    color: lightgreen;
-    font-size: 1.25rem;
-  }
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 1rem;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1:nth-child(even) {
+  background: radial-gradient(#ffc8dd, #2a9d8f);
+}
+
+.card-1:nth-child(odd) {
+  background: radial-gradient(#a8dadc, #457b9d);
 }

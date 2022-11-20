@@ -17,18 +17,16 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
+  # def edit
+  #   @post = Post.find(params[:id])
+  # end
 
-  def update
-    @post = Post.find(params[:id])
-    @post.update(posts_params)
-    # No need for app/views/restaurants/update.html.erb
-    redirect_to post_path(@post)
-  end
-
-  end
+  # def update
+  #   @post = Post.find(params[:id])
+  #   @post.update(posts_params)
+  #   # No need for app/views/restaurants/update.html.erb
+  #   redirect_to post_path(@post)
+  # end
 
   def destory
     @post = Post.find(params[:id])
