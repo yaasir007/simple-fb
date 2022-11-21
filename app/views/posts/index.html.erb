@@ -10,7 +10,7 @@
       <p class="card__exit"><i class="fas fa-times"></i></p>
       <h2 class="card__title"><%= t.description %></h2>
       <p class="card__apply">
-        <a class="card__link" href="#">View Post <i class="fas fa-arrow-right"></i></a>
+        <%= link_to  "View Post", post_path(t), class: 'card__link' %>
       </p>
     </div>
   <% end %>
