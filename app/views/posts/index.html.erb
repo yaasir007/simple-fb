@@ -4,7 +4,7 @@
 </div>
 
 <div class='container-post'>
-  <% @posts.each do |t| %>
+  <% @posts.reverse_each do |t| %>
     <div class="card card-1">
       <div class="card__icon"><%= t.name %></div>
       <p class="card__exit"><i class="fas fa-times"></i></p>
