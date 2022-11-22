@@ -3,7 +3,7 @@
     <div class="titlenew">Welcome</div>
     <div class="subtitle">Let's create your post!</div>
 
-    <%= simple_form_for [@post_new], method: :post do |f| %>
+    <%= simple_form_for [@post], method: :post do |f| %>
     <div class="fields">
       <div class="input-container ic1">
         <%= f.input :name, label: false, class: 'input', error: 'Username is mandatory, please specify one' %>

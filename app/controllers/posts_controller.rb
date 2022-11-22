@@ -1,38 +1,38 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.all
+  end
+
+  def new
+    @post = Post.new
   end
 
   def show
     @post = Post.find(params[:id])
   end
 
-  def new
-    @post_new = Post.new
-  end
-
   def create
-    @posts = Post.new(params_post)
-    @posts.save
+    @post = Post.new(params_post)
+    @post.save
     redirect_to posts_path
   end
 
-  # def edit
-  #   @post = Post.find(params[:id])
-  # end
+  def edit
+    @post = Post.find(params[:id])
+  end
 
-  # def update
-  #   @post = Post.find(params[:id])
-  #   @post.update(posts_params)
-  #   # No need for app/views/restaurants/update.html.erb
-  #   redirect_to post_path(@post)
-  # end
+  def update
+    @post = Post.find(params[:id])
+    @post.update(params_post)
+    redirect_to posts_path
+  end
 
-  def destory
+  def destroy
     @post = Post.find(params[:id])
     @post.destroy
 
-    redirect_to posts_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
