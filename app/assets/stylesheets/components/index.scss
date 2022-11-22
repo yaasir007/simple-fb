@@ -9,7 +9,8 @@ html {
   font-weight: 500;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: .5px;
-  background-color: #ffc8dd;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 .title {
@@ -102,7 +103,7 @@ html {
 /* CARD BACKGROUNDS */
 
 .card-1:nth-child(even) {
-  background: radial-gradient(#ffc8dd, #2a9d8f);
+  background: radial-gradient(#abcac6, #2a9d8f);
 }
 
 .card-1:nth-child(odd) {
