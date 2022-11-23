@@ -5,11 +5,12 @@
 <%= @post.number_of_guests %> <br>
 
 <%= link_to "Back", posts_path %> <br>
+<%= link_to "Edit", edit_post_path %> <br>
 <%= link_to "New Post", new_post_path %> <br>
 <%= link_to "Delete", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
 
 <div class="card-container">
   <div class="card-wrapper">
-    
+
   </div>
 </div>
