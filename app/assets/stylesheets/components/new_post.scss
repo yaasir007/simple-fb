@@ -137,6 +137,7 @@ select:focus {
   // outline: 0;
   text-align: center;
   width: 100%;
+  transition: all .25s ease-in;
 }
 
 .submit1 {
@@ -152,6 +153,7 @@ select:focus {
   // outline: 0;
   text-align: center;
   width: 100%;
+  transition: all .3s ease-in;
 }
 
 .submit:hover {
