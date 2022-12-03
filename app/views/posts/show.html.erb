@@ -1,8 +1,30 @@
-<%= @post.name %>
-<%= @post.address %>
-<%= @post.description %>
-<%= @post.price_per_night %>
-<%= @post.number_of_guests %>
+<%= link_to "Back", posts_path %> <br>
+<%= link_to "Edit", edit_post_path %> <br>
+<%= link_to "New Post", new_post_path %> <br>
+<%= link_to "Delete", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
 
+<div class="card-container">
+  <div class="card-wrapper">
+    <div class="card">
+      <div class="name field">
+        <%= @post.name %>
+      </div>
 
-<%= link_to "Back", posts_path %>
+      <div class="address field">
+        <%= @post.address %>
+      </div>
+
+      <div class="description">
+        <%= @post.description %>
+      </div>
+
+      <div class="pernight">
+        <%= @post.price_per_night %>
+      </div>
+
+      <div class="guests">
+        <%= @post.number_of_guests %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,25 @@
-<nav>
+<div class="title">
   <h2>All Posts - (<%= @posts.count %>)</h2>
+  <h2><%= link_to "New Post", new_post_path %></h2>
+</div>
 
-  <div style="width: 200px; height: 100px;">
-    <% @posts.each do |t| %>
-      <%= t.name  %>
-      <%= t.address  %>
-      <%= t.description  %>
-      <%= t.price_per_night  %>
-      <%= t.number_of_guests  %>
-      <%= link_to "Show", post_path(t) %>
-      <br>
-    <% end %>
-  </div>
-</nav>
+<div class='container-post'>
+  <% @posts.reverse_each do |t| %>
+    <div class="card card-1">
+      <div class="card__icon"><%= t.name %></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title"><%= t.description %></h2>
+      <p class="card__apply">
+        <%= link_to  "View Post", post_path(t), class: 'card__link' %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+
+<script>
+  ScrollReveal().reveal('.card', { delay: 200 });
+  ScrollReveal().reveal('.div1', { delay: 250 });
+  ScrollReveal().reveal('.div2', { delay: 300 });
+  ScrollReveal().reveal('.div3', { delay: 350 });
+</script>
