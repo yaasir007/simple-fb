@@ -1,0 +1,13 @@
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: brown;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: black;
+}

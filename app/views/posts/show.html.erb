@@ -1,8 +1,3 @@
-<%= link_to "Back", posts_path %> <br>
-<%= link_to "Edit", edit_post_path %> <br>
-<%= link_to "New Post", new_post_path %> <br>
-<%= link_to "Delete", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
-
 <div class="card-container">
   <div class="card-wrapper">
     <div class="card">
@@ -24,6 +19,13 @@
 
       <div class="guests">
         <%= @post.number_of_guests %>
+      </div>
+
+      <div class="buttons">
+        <%= link_to "Back", posts_path, class: 'btn' %>
+        <%= link_to "Edit", edit_post_path, class: 'btn' %>
+        <%= link_to "New Post", new_post_path, class: 'btn' %>
+        <%= link_to "Delete", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'btn'  %>
       </div>
     </div>
   </div>
