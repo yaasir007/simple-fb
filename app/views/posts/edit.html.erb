@@ -18,7 +18,7 @@
       </div>
 
       <div class="input-container ic1">
-        <%= f.input :description, label: false, class: 'input' %>
+        <%= f.input :description, label: false, class: 'des input ' %>
         <div class="cut cut-short"></div>
         <label for="email" class="placeholder">Description</>
       </div>
@@ -37,8 +37,8 @@
 
       <br>
 
-      <a href='/'><button type="text" class="submit1">Back</button></a>
-      <button type="text" class="submit">Submit</button>
+      <%= link_to "Back", posts_path, class: "submit1" %>
+      <%= f.submit "Update Task", class:"submit" %>
     </div>
     <% end %>
   </div>
