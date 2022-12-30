@@ -33,8 +33,10 @@
         <label for="email" class="placeholder">Email</>
       </div>
 
-      <%= f.submit "Create Task", class:"submit" %>
-      <%= link_to "Back", posts_path, class:"submit" %>
+      <div class="btnContainer">
+        <%= f.submit "Create Task", class:"submit" %>
+        <%= link_to "Back", posts_path, class:"backbtn" %>
+      </div>
     <% end %>
 
   </div>
