@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @posts = Post.all
   end
@@ -23,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
     @post.update(params_post)
     redirect_to posts_path
   end
@@ -39,5 +39,4 @@ class PostsController < ApplicationController
   def params_post
     params.require(:post).permit(:name, :address, :description, :price_per_night, :number_of_guests)
   end
-
 end
