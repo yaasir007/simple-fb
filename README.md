@@ -1,14 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a RAILS App with all CRUD Methods.
+> Create
+> Read
+> Update
+> Delete
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* ...
+Theme: Create a Card.
